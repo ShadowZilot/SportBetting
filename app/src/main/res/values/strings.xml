@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SportBettingApp</string>
+    <string name="play_label">Играть</string>
+    <string name="soccer_label">Футбол</string>
+    <string name="tennis_label">Теннис</string>
+    <string name="hokey_label">Хоккей</string>
+    <string name="box_label">Бокс</string>
 </resources>
