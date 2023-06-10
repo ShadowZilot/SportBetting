@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appTopBar"
+        layout="@layout/app_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/flagsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTopBar">
+
+        <FrameLayout
+            android:layout_width="136dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appTopBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sport_item_bg"
+                android:gravity="center|center_vertical"
+                android:text="🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="60sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="136dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appTopBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sport_item_bg"
+                android:gravity="center|center_vertical"
+                android:text="🇫🇷"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="60sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="136dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appTopBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sport_item_bg"
+                android:gravity="center|center_vertical"
+                android:text="🇺🇸"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="60sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="136dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appTopBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sport_item_bg"
+                android:gravity="center|center_vertical"
+                android:text="🇩🇪"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="60sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="136dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appTopBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sport_item_bg"
+                android:gravity="center|center_vertical"
+                android:text="🇮🇹"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="60sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="136dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appTopBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sport_item_bg"
+                android:gravity="center|center_vertical"
+                android:text="🇪🇸"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="60sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,7 +33,8 @@
             android:background="@drawable/sport_item_bg"
             android:textSize="60sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            tools:text="🏴󠁧󠁢󠁥󠁮󠁧󠁿"/>
+            android:text="🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+            tools:ignore="HardcodedText" />
     </FrameLayout>
 
     <TextView
