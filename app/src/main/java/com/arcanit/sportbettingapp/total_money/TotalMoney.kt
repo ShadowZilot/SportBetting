@@ -15,7 +15,7 @@ interface TotalMoney {
             Context.MODE_PRIVATE)
 
         override fun moneyAmount(): Int {
-            return mData.getInt("total_money", 100)
+            return mData.getInt("total_money", 200000)
         }
 
         override fun writeMoney(money: Int) {

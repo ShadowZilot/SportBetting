@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/red_500</item>
         <item name="android:fontFamily">@font/cera_pro_medium</item>
+        <item name="colorSurface">#F2F4F7</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

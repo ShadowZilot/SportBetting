@@ -5,4 +5,10 @@
     <string name="tennis_label">Теннис</string>
     <string name="hokey_label">Хоккей</string>
     <string name="box_label">Бокс</string>
+    <string name="your_team_label">Твоя\nкоманда</string>
+    <string name="vs_text_label">VS</string>
+    <string name="select_team_label">Выбрать команду</string>
+    <string name="betting_label">Ставка</string>
+    <string name="betting_factor_label">Коэффициент 2.0</string>
+    <string name="start_game_label">Узнать результат</string>
 </resources>

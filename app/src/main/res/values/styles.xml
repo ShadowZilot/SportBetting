@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RootView">
+        <item name="android:background">#F2F4F7</item>
+    </style>
+    <style name="TeamSelectionBtn">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="BettingText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/cera_pro_light</item>
+    </style>
+    <style name="StartGameBtn">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">@color/yellow_200</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

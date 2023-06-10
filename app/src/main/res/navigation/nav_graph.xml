@@ -10,5 +10,14 @@
         android:id="@+id/selectGameFragment"
         android:name="com.arcanit.sportbettingapp.select_game.SelectGameFragment"
         android:label="SelectGameFragment"
-        tools:layout="@layout/start_fragment"/>
+        tools:layout="@layout/start_fragment">
+        <action
+            android:id="@+id/action_selectGameFragment_to_bettingFragment"
+            app:destination="@id/bettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bettingFragment"
+        android:name="com.arcanit.sportbettingapp.make_bet.BettingFragment"
+        android:label="BettingFragment"
+        tools:layout="@layout/bet_fragment"/>
 </navigation>

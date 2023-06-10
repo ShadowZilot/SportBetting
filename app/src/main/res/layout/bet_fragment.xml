@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/RootView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/appTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/app_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/enemyTeamContainer"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toBottomOf="@id/appTopBar"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/enemyTeam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center|center_vertical"
+            android:background="@drawable/sport_item_bg"
+            android:textSize="60sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            tools:text="🏴󠁧󠁢󠁥󠁮󠁧󠁿"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/vsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs_text_label"
+        android:textSize="22sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintTop_toTopOf="@id/enemyTeamContainer"
+        app:layout_constraintBottom_toBottomOf="@id/yourTeamContainer"
+        app:layout_constraintStart_toEndOf="@id/enemyTeamContainer"
+        app:layout_constraintEnd_toStartOf="@id/yourTeamContainer"/>
+
+    <FrameLayout
+        android:id="@+id/yourTeamContainer"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@id/appTopBar"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/yourTeam"
+            android:layout_width="102dp"
+            android:layout_height="100dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:background="@drawable/sport_item_bg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="20sp"
+            android:text="@string/your_team_label" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/selectTeamBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/ic_star"
+        android:text="@string/select_team_label"
+        android:theme="@style/TeamSelectionBtn"
+        style="@style/TeamSelectionBtn"
+        app:layout_constraintTop_toBottomOf="@id/enemyTeamContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/bettingContainer"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/betting_bg"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/selectTeamBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="@string/betting_label"
+            android:textAppearance="@style/BettingText"/>
+
+        <EditText
+            android:id="@+id/bettingInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/BettingText"
+            android:layout_gravity="center"
+            tools:text="50"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bettingFactor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="11sp"
+        android:fontFamily="@font/cera_pro_light"
+        android:text="@string/betting_factor_label"
+        app:layout_constraintTop_toBottomOf="@id/bettingContainer"
+        app:layout_constraintStart_toStartOf="@id/bettingContainer"
+        app:layout_constraintEnd_toEndOf="@id/bettingContainer"/>
+    
+    <Button
+        android:id="@+id/startGame"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/start_game_label"
+        style="@style/StartGameBtn"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/bettingFactor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
