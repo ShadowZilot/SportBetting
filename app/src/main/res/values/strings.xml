@@ -20,4 +20,5 @@
     <string name="to_main_menu_label">На главную</string>
     <string name="get_gift_label">Получить подарок</string>
     <string name="results_score">+%d монет</string>
+    <string name="gift_loading_error">Не удалось загрузить контент!</string>
 </resources>

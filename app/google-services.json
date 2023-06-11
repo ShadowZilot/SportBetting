@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376339234008",
+    "project_id": "sportbetapp-22d62",
+    "storage_bucket": "sportbetapp-22d62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376339234008:android:b4541919166c2542feebad",
+        "android_client_info": {
+          "package_name": "com.arcanit.sportbettingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376339234008-bu7kagodg52dkjnupidsk6gbf7sv1t6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4ItobA7B3tQKQxqR64mKN4QH6o_JvZM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376339234008-bu7kagodg52dkjnupidsk6gbf7sv1t6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

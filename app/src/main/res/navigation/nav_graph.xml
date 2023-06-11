@@ -49,5 +49,17 @@
         <action
             android:id="@+id/action_resultFragment_to_selectGameFragment"
             app:destination="@id/selectGameFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_giftFragment"
+            app:destination="@id/giftFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/giftFragment"
+        android:name="com.arcanit.sportbettingapp.game.results.GiftFragment"
+        android:label="GiftFragment"
+        tools:layout="@layout/gift_fragment">
+        <action
+            android:id="@+id/action_giftFragment_to_selectGameFragment"
+            app:destination="@id/selectGameFragment" />
     </fragment>
 </navigation>

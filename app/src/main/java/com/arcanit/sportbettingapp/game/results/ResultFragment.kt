@@ -29,8 +29,19 @@ class ResultFragment : BaseFragment<ResultsFragmentBinding>(R.layout.results_fra
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val betAmount = requireArguments().getInt("bet")
         mBinding.toMainMenu.setOnClickListener {
+            findNavController().clearBackStack(
+                R.id.action_resultFragment_to_selectGameFragment
+            )
             findNavController().navigateWithoutBack(
                 R.id.action_resultFragment_to_selectGameFragment
+            )
+        }
+        mBinding.getGiftBtn.setOnClickListener {
+            findNavController().clearBackStack(
+                R.id.action_resultFragment_to_giftFragment
+            )
+            findNavController().navigateWithoutBack(
+                R.id.action_resultFragment_to_giftFragment
             )
         }
         if (mViewModel.checkVictory(betAmount)) {
