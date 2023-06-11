@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.arcanit.sportbettingapp.commons.MoneyViewModel
-import kotlinx.coroutines.Dispatchers
+import com.arcanit.sportbettingapp.total_money.TotalMoney
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
@@ -23,6 +23,7 @@ class GameViewModel : ViewModel(), MoneyViewModel {
             }
         }
     }
+    private var mScore = Pair(0, 0)
     private val mTimeFlow = MutableStateFlow(60_000L)
 
     fun clearTime() {
@@ -36,6 +37,17 @@ class GameViewModel : ViewModel(), MoneyViewModel {
         return mTimeFlow
     }
 
+    fun checkVictory(bet: Int) : Boolean {
+        return if (mScore.first > mScore.second) {
+            false
+        } else {
+            TotalMoney.Base.Instance().writeMoney(
+                TotalMoney.Base.Instance().moneyAmount() + (bet * 2)
+            )
+            true
+        }
+    }
+
     fun randomScore() : Pair<Int, Int> {
         var enemyScore = (0..10).random()
         var yourScore = (0..10).random()
@@ -43,7 +55,8 @@ class GameViewModel : ViewModel(), MoneyViewModel {
             enemyScore = (0..10).random()
             yourScore = (0..10).random()
         }
-        return Pair(enemyScore, yourScore)
+        mScore = Pair(enemyScore, yourScore)
+        return mScore
     }
 
     class Factory : ViewModelProvider.Factory {

@@ -36,5 +36,18 @@
         android:id="@+id/gameFragment"
         android:name="com.arcanit.sportbettingapp.game.GameFragment"
         android:label="GameFragment"
-        tools:layout="@layout/game_fragment"/>
+        tools:layout="@layout/game_fragment">
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.arcanit.sportbettingapp.game.results.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/results_fragment">
+        <action
+            android:id="@+id/action_resultFragment_to_selectGameFragment"
+            app:destination="@id/selectGameFragment" />
+    </fragment>
 </navigation>

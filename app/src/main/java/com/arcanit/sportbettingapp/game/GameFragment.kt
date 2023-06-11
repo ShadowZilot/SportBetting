@@ -8,8 +8,10 @@ import android.widget.Toast
 import androidx.core.animation.addListener
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.arcanit.sportbettingapp.R
 import com.arcanit.sportbettingapp.app_top.AppTopHandling
+import com.arcanit.sportbettingapp.commons.navigateWithoutBack
 import com.arcanit.sportbettingapp.databinding.GameFragmentBinding
 import com.shadowzilot.quiz_app.commons.BaseFragment
 import com.shadowzilot.quiz_app.commons.RecreationActivity
@@ -35,10 +37,12 @@ class GameFragment : BaseFragment<GameFragmentBinding>(R.layout.game_fragment) {
             mViewModel.clearTime()
         }
         mBinding.getResultsBtn.setOnClickListener {
-            Toast.makeText(
-                requireContext(),
-                "Результаты", Toast.LENGTH_SHORT
-            ).show()
+            findNavController().navigateWithoutBack(
+                R.id.action_gameFragment_to_resultFragment,
+                Bundle().apply {
+                    putInt("bet", requireArguments().getInt("bet"))
+                }
+            )
         }
         mBinding.yourTeam.text = requireArguments().getString("team_flag")
         mBinding.gameContent.setBackgroundResource(

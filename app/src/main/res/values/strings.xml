@@ -14,4 +14,10 @@
     <string name="timer_divider_label">:</string>
     <string name="score_label">Счёт</string>
     <string name="get_results_label">Перейти к результатам</string>
+    <string name="victory_label">Победа!</string>
+    <string name="fail_label">Не повезло</string>
+    <string name="try_again_label">Время попробовать еще раз!</string>
+    <string name="to_main_menu_label">На главную</string>
+    <string name="get_gift_label">Получить подарок</string>
+    <string name="results_score">+%d монет</string>
 </resources>
