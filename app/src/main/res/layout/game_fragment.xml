@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/tennis_bg">
+
+    <include
+        android:id="@+id/appTopBar"
+        layout="@layout/app_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timerMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/timer_bg"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:translationZ="2dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/timerDivider"
+        app:layout_constraintBottom_toBottomOf="@id/timerDivider"
+        app:layout_constraintEnd_toStartOf="@id/timerDivider"
+        app:layout_constraintTop_toTopOf="@id/timerDivider"
+        tools:text="00" />
+
+    <TextView
+        android:id="@+id/timerDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/timer_divider_label"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTopBar" />
+
+    <TextView
+        android:id="@+id/timerSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/timer_bg"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:translationZ="2dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/timerDivider"
+        app:layout_constraintBottom_toBottomOf="@id/timerDivider"
+        app:layout_constraintStart_toEndOf="@id/timerDivider"
+        app:layout_constraintTop_toTopOf="@id/timerDivider"
+        tools:text="00" />
+
+    <FrameLayout
+        android:id="@+id/enemyTeamContainer"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:translationZ="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerMinute">
+
+        <TextView
+            android:id="@+id/enemyTeam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sport_item_bg"
+            android:gravity="center|center_vertical"
+            android:text="🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="60sp"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/vsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs_text_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/yourTeamContainer"
+        app:layout_constraintEnd_toStartOf="@id/yourTeamContainer"
+        app:layout_constraintStart_toEndOf="@id/enemyTeamContainer"
+        app:layout_constraintTop_toTopOf="@id/enemyTeamContainer" />
+
+    <FrameLayout
+        android:id="@+id/yourTeamContainer"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerSeconds">
+
+        <TextView
+            android:id="@+id/yourTeam"
+            android:layout_width="102dp"
+            android:layout_height="100dp"
+            android:background="@drawable/sport_item_bg"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="60sp"
+            tools:text="f" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:text="@string/score_label"
+        android:textAppearance="@style/ScoreLabel"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enemyTeamContainer" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:textAlignment="center"
+        android:textAppearance="@style/ScoreText"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scoreLabel"
+        tools:text="1 : 2" />
+
+    <Button
+        android:id="@+id/getResultsBtn"
+        style="@style/StartGameBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="16dp"
+        android:alpha="0"
+        android:enabled="false"
+        android:backgroundTint="@color/yellow_200"
+        android:text="@string/get_results_label"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scoreText" />
+
+    <FrameLayout
+        android:id="@+id/gradient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.3"
+        android:background="@drawable/game_bg"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTopBar"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

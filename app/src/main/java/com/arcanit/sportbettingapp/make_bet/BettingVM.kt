@@ -20,6 +20,18 @@ class BettingVM : ViewModel(), MoneyViewModel {
         } else betAmount >= 100
     }
 
+    fun makeBet(bet: Int) {
+        val money = TotalMoney.Base.Instance()
+        money.writeMoney(
+            money.moneyAmount() - bet
+        )
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        mFlag = ""
+    }
+
     @Suppress("UNCHECKED_CAST")
     class Factory : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {

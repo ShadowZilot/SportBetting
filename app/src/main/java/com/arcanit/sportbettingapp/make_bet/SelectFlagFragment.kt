@@ -32,7 +32,7 @@ class SelectFlagFragment : BaseFragment<FlagsFragmentBinding>(R.layout.flags_fra
             (mBinding.flagsContainer.getChildAt(i) as ViewGroup).getChildAt(0)
                 .setOnClickListener {
                     mViewModel.selectYourTeam((it as TextView).text as String)
-                    findNavController().popBackStack()
+                        findNavController().popBackStack()
                     (requireActivity() as RecreationActivity).relaunch()
                 }
         }

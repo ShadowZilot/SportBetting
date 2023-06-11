@@ -23,10 +23,18 @@
         <action
             android:id="@+id/action_bettingFragment_to_selectFlagFragment"
             app:destination="@id/selectFlagFragment" />
+        <action
+            android:id="@+id/action_bettingFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectFlagFragment"
         android:name="com.arcanit.sportbettingapp.make_bet.SelectFlagFragment"
         android:label="SelectFlagFragment"
         tools:layout="@layout/flags_fragment"/>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.arcanit.sportbettingapp.game.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/game_fragment"/>
 </navigation>

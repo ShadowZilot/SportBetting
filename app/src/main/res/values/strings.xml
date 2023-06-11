@@ -11,4 +11,7 @@
     <string name="betting_label">Ставка</string>
     <string name="betting_factor_label">Коэффициент 2.0</string>
     <string name="start_game_label">Узнать результат</string>
+    <string name="timer_divider_label">:</string>
+    <string name="score_label">Счёт</string>
+    <string name="get_results_label">Перейти к результатам</string>
 </resources>

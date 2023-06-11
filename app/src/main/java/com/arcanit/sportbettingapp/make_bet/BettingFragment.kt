@@ -6,14 +6,12 @@ import android.text.TextWatcher
 import android.util.TypedValue
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.arcanit.sportbettingapp.R
 import com.arcanit.sportbettingapp.app_top.AppTopHandling
 import com.arcanit.sportbettingapp.databinding.BetFragmentBinding
 import com.shadowzilot.quiz_app.commons.BaseFragment
 import com.shadowzilot.quiz_app.commons.RecreationActivity
-import java.lang.NumberFormatException
 
 class BettingFragment : BaseFragment<BetFragmentBinding>(R.layout.bet_fragment) {
 
@@ -57,6 +55,19 @@ class BettingFragment : BaseFragment<BetFragmentBinding>(R.layout.bet_fragment) 
                 )
             }
         })
+        mBinding.startGame.setOnClickListener {
+            if (mViewModel.yourTeamFlag() != "") {
+                mViewModel.makeBet(mBinding.bettingInput.text.toString().toInt())
+                findNavController().navigate(
+                    R.id.action_bettingFragment_to_gameFragment,
+                    Bundle().apply {
+                        putInt("bet", mBinding.bettingInput.text.toString().toInt())
+                        putString("team_flag", mViewModel.yourTeamFlag())
+                        putInt("game_code", requireArguments().getInt("game_code"))
+                    }
+                )
+            }
+        }
     }
 
     override fun onStart() {

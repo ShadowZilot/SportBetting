@@ -19,4 +19,14 @@
         <item name="android:backgroundTint">@color/yellow_200</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="ScoreLabel">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ScoreText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">78sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
