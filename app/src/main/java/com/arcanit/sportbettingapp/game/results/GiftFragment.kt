@@ -1,5 +1,6 @@
 package com.arcanit.sportbettingapp.game.results
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -29,8 +30,10 @@ class GiftFragment : BaseFragment<GiftFragmentBinding>(R.layout.gift_fragment) {
         SelectGameVM.Factory()
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         mAppTop.setMoney(mViewModel.totalMoney())
+        mBinding.giftView.settings.javaScriptEnabled = true
         Firebase.remoteConfig.setDefaultsAsync(R.xml.config_values)
         Firebase.remoteConfig.fetchAndActivate()
             .addOnCompleteListener {

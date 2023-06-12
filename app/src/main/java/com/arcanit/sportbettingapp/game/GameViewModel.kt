@@ -9,7 +9,7 @@ import com.arcanit.sportbettingapp.total_money.TotalMoney
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-private const val sCountTime = 3_000L
+private const val sCountTime = 60_000L
 
 class GameViewModel : ViewModel(), MoneyViewModel {
     private val mTimer = object : CountDownTimer(sCountTime, 1000L) {
@@ -51,13 +51,13 @@ class GameViewModel : ViewModel(), MoneyViewModel {
     }
 
     fun randomScore() : Pair<Int, Int> {
-//        var enemyScore = (0..10).random()
-//        var yourScore = (0..10).random()
-//        while (enemyScore == yourScore) {
-//            enemyScore = (0..10).random()
-//            yourScore = (0..10).random()
-//        }
-        mScore = Pair(0, 10)
+        var enemyScore = (0..10).random()
+        var yourScore = (0..10).random()
+        while (enemyScore == yourScore) {
+            enemyScore = (0..10).random()
+            yourScore = (0..10).random()
+        }
+        mScore = Pair(enemyScore, yourScore)
         return mScore
     }
 
