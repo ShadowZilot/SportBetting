@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.arcanit.sportbettingapp.R
 import com.arcanit.sportbettingapp.app_top.AppTopHandling
+import com.arcanit.sportbettingapp.commons.navigateWithoutBack
 import com.arcanit.sportbettingapp.databinding.BetFragmentBinding
 import com.shadowzilot.quiz_app.commons.BaseFragment
 import com.shadowzilot.quiz_app.commons.RecreationActivity
@@ -58,7 +59,7 @@ class BettingFragment : BaseFragment<BetFragmentBinding>(R.layout.bet_fragment) 
         mBinding.startGame.setOnClickListener {
             if (mViewModel.yourTeamFlag() != "") {
                 mViewModel.makeBet(mBinding.bettingInput.text.toString().toInt())
-                findNavController().navigate(
+                findNavController().navigateWithoutBack(
                     R.id.action_bettingFragment_to_gameFragment,
                     Bundle().apply {
                         putInt("bet", mBinding.bettingInput.text.toString().toInt())
